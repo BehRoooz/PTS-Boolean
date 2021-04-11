@@ -1,0 +1,152 @@
+{
+    "attractors": [
+        {
+            "is_steady": false, 
+            "state": {
+                "dict": {
+                    "Fis": 1, 
+                    "Crp": 1, 
+                    "EI": 1, 
+                    "Mlc": 0, 
+                    "HPr": 1, 
+                    "Glc_Uptake": 0, 
+                    "PEP": 1, 
+                    "EIICB": 0, 
+                    "EIIA": 0
+                }, 
+                "str": "110010101", 
+                "prop": "Crp&EI&!EIIA&!EIICB&Fis&!Glc_Uptake&HPr&!Mlc&PEP"
+            }, 
+            "mintrapspace": {
+                "is_faithful": "yes", 
+                "dict": {
+                    "Fis": 1, 
+                    "Crp": 1, 
+                    "PEP": 1
+                }, 
+                "is_univocal": "yes", 
+                "str": "1---1---1", 
+                "prop": "Crp&Fis&PEP"
+            }, 
+            "is_cyclic": true
+        }
+    ], 
+    "primes": {
+        "Fis": [
+            [], 
+            [
+                {}
+            ]
+        ], 
+        "Crp": [
+            [], 
+            [
+                {}
+            ]
+        ], 
+        "EI": [
+            [
+                {
+                    "PEP": 0
+                }, 
+                {
+                    "Mlc": 1
+                }
+            ], 
+            [
+                {
+                    "Mlc": 0, 
+                    "PEP": 1
+                }
+            ]
+        ], 
+        "Mlc": [
+            [
+                {
+                    "Mlc": 1
+                }
+            ], 
+            [
+                {
+                    "Mlc": 0
+                }
+            ]
+        ], 
+        "HPr": [
+            [
+                {
+                    "Mlc": 1
+                }, 
+                {
+                    "EI": 0
+                }
+            ], 
+            [
+                {
+                    "Mlc": 0, 
+                    "EI": 1
+                }
+            ]
+        ], 
+        "Glc_Uptake": [
+            [
+                {
+                    "EIICB": 0
+                }
+            ], 
+            [
+                {
+                    "EIICB": 1
+                }
+            ]
+        ], 
+        "PEP": [
+            [], 
+            [
+                {}
+            ]
+        ], 
+        "EIICB": [
+            [
+                {
+                    "Mlc": 1
+                }, 
+                {
+                    "Fis": 0
+                }, 
+                {
+                    "EIIA": 0
+                }, 
+                {
+                    "Crp": 0
+                }
+            ], 
+            [
+                {
+                    "Fis": 1, 
+                    "Crp": 1, 
+                    "EIIA": 1, 
+                    "Mlc": 0
+                }
+            ]
+        ], 
+        "EIIA": [
+            [
+                {
+                    "Mlc": 1
+                }, 
+                {
+                    "HPr": 0
+                }
+            ], 
+            [
+                {
+                    "HPr": 1, 
+                    "Mlc": 0
+                }
+            ]
+        ]
+    }, 
+    "update": "asynchronous", 
+    "is_complete": "yes"
+}
